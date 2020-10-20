@@ -15,7 +15,7 @@ type Props = {
   organization: LightWeightOrganization;
   query: string;
   selectedProjectIds?: number[];
-  groupIds: number[];
+  groupIds: string[];
 };
 
 type State = {
@@ -119,7 +119,7 @@ class NoGroupsHandler extends React.Component<Props, State> {
       <ErrorRobot
         org={organization}
         project={project}
-        sampleIssueId={sampleIssueId?.toString() ?? ''}
+        sampleIssueId={sampleIssueId}
         gradient
       />
     );
